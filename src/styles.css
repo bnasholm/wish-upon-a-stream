@@ -1,0 +1,270 @@
+body {
+  display: flex;
+  justify-content: stretch;
+  background-color: #00073e;
+  overflow-y: hidden;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#main-content {
+  padding-bottom: 24px;
+}
+#loading-screen,
+#error-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00073e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 2s;
+}
+
+#error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  > * + * {
+    margin-top: 8px;
+  }
+}
+
+p {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.heading {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1 {
+  color: #fff;
+  font-size: 26px;
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+button {
+  min-width: 200px;
+  padding: 16px;
+  background-color: #356fc2;
+  > p {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  border: 0;
+}
+#disney-logo {
+  animation: fadeIn ease 3s;
+  width: 25%;
+  height: auto;
+}
+
+#nav-bar {
+  width: 100%;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#disney-logo-small {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.profile-icon {
+  padding: 4px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #356fc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fallback-img-title {
+  position: absolute;
+  z-index: 1;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-section {
+  display: flex;
+  gap: 32px;
+  padding: 16px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#main-content > * + * {
+  margin-top: 16px;
+}
+
+.tile-section::-webkit-scrollbar {
+  display: none;
+}
+
+.tile-wrapper {
+  flex-shrink: 0;
+  width: calc(100vw / 6);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  align-items: center;
+  border-radius: 8px;
+  outline: 3px solid transparent;
+  transition: transform 0.5s;
+  position: relative;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tile-wrapper:focus {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  transform: scale(1.05);
+}
+
+.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.has-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.media-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.no-focus {
+  outline: none;
+}
+
+.modal-backdrop {
+  background-color: #000;
+  opacity: 0.25;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.modal-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 50vw;
+  height: auto;
+  background: #154282;
+  border-radius: 8px;
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+#modal-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description {
+  font-size: 14px;
+}
+
+#modal-video-container {
+  max-height: 25%;
+  > .media-video {
+    opacity: 1;
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-slide {
+  display: flex;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-slide img {
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
