@@ -10,7 +10,7 @@ This is a **Disney+ Clone** built using **HTML**, **CSS** and **TypeScript**. It
 ## Live Demo
 The project is deployed on **AWS S3** and can be accessed here:
 
-👉 [Disney+ Clone Live](http://www.breannanasholm.com/wish-upon-a-stream/)
+👉 [Disney+ Clone Live](https://s3.us-west-2.amazonaws.com/breannanasholm.com/build/wish-upon-a-stream/index.html)
 
 ---
 
