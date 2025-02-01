@@ -8,9 +8,9 @@ This is a **Disney+ Clone** built using **HTML**, **CSS** and **TypeScript**. It
 - **Integrated with mock Disney+ API** for fetching content details
 
 ## Live Demo
-The project is deployed on **GitHub Pages** and can be accessed here:
+The project is deployed on **AWS S3** and can be accessed here:
 
-👉 [Disney+ Clone Live](https://bnasholm.github.io/wish-upon-a-stream/)
+👉 [Disney+ Clone Live](http://www.breannanasholm.com/wish-upon-a-stream/)
 
 ---
 
